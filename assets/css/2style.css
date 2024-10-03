@@ -1,0 +1,115 @@
+body {
+    background-image: url(../img/espaco.png);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+
+body{
+    background-image: url(../img/espaco.png);
+    height: 100dvh;
+}
+.solar-system {
+    position: relative;
+    width: 600px; /* Largura do sistema solar */
+    height: 600px; /* Altura do sistema solar */
+}
+
+.sun {
+    background-color: yellow;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px yellow;
+}
+
+.sun img{
+    border-radius: 100px;
+
+}
+
+.planet {
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.mercury {
+    background-color: gray;
+    width: 20px;
+    height: 20px;
+    animation: orbit 5s linear infinite;
+    transform-origin: 130px; /* Distância do sol */
+}
+
+.venus {
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    animation: orbit 7s linear infinite;
+    transform-origin: 180px;
+}
+
+.earth {
+    background-color: blue;
+    width: 30px;
+    height: 30px;
+    animation: orbit 10s linear infinite;
+    transform-origin: 230px;
+}
+
+.mars {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    animation: orbit 12s linear infinite;
+    transform-origin: 280px;
+}
+
+.jupiter {
+    background-color: brown;
+    width: 50px;
+    height: 50px;
+    animation: orbit 15s linear infinite;
+    transform-origin: 340px;
+}
+
+.saturn {
+    background-color: goldenrod;
+    width: 45px;
+    height: 45px;
+    animation: orbit 18s linear infinite;
+    transform-origin: 400px;
+}
+
+.uranus {
+    background-color: lightblue;
+    width: 35px;
+    height: 35px;
+    animation: orbit 20s linear infinite;
+    transform-origin: 460px;
+}
+
+.neptune {
+    background-color: darkblue;
+    width: 30px;
+    height: 30px;
+    animation: orbit 22s linear infinite;
+    transform-origin: 520px;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(0);
+    }
+    to {
+        transform: rotate(360deg) translateX(0);
+    }
+}
