@@ -1,115 +1,155 @@
 body {
-    background-image: url(../img/espaco.png);    
+    background-image: url("/espaco4.png");
+    background-repeat: no-repeat;
+     background-size: cover;
+margin: 0;
+margin-top: 200px;
+height: 100hv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+}
+
+.container{
+    font-size: 6px;
+width: 40em;
+height: 40em;
+position: sticky;
+
+}
+
+.img{
+    height: 130%;
+    width: 130%;
+}
+
+.sol {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100dvh;
-    overflow: hidden;
-}
-
-
-body{
-    background-image: url(../img/espaco.png);
-    height: 100dvh;
-}
-.solar-system {
-    position: relative;
-    width: 600px; /* Largura do sistema solar */
-    height: 600px; /* Altura do sistema solar */
-}
-
-.sun {
-    background-color: yellow;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    justify-content: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px yellow;
+    top: 50%; 
+    left: 50%; 
+    width: 10em;
+    height: 10em;
+    border-radius: 50%; 
+    animation: orbit 50s linear infinite;
+    background-image: url(../../solJuan.png);
+    background-size: cover; 
+    transform: translate(-50%, -50%); 
 }
 
-.sun img{
-    border-radius: 100px;
 
+.mercurio .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .netuno{
+position: absolute;
+border-style:solid ;
+border-color: rgb(240, 248, 255);
+border-radius: 0.1em 0.1em 0 0;
+border-radius: 50%;
 }
 
-.planet {
-    border-radius: 50%;
-    position: absolute;
-    opacity: 0.8;
+.mercurio{
+top:12.5em;
+left: 12.5em;
+width: 15em;
+height: 15em;
+animation: orbit 50s linear infinite;
 }
 
-.mercury {
-    background-color: gray;
-    width: 20px;
-    height: 20px;
-    animation: orbit 5s linear infinite;
-    transform-origin: 130px; /* Distância do sol */
+.venus{
+top:10em;
+left: 10em;
+width: 20em;
+height: 20em;
+animation: orbit 50s linear infinite;
 }
 
-.venus {
-    background-color: orange;
-    width: 30px;
-    height: 30px;
-    animation: orbit 7s linear infinite;
-    transform-origin: 180px;
+
+.terra{
+top:6em;
+left: 6em;
+width: 28em;
+height: 28em;
+animation: orbit 50s linear infinite;
 }
 
-.earth {
-    background-color: blue;
-    width: 30px;
-    height: 30px;
-    animation: orbit 10s linear infinite;
-    transform-origin: 230px;
+.lua{
+top:2em;
+left: 2.5em;
+width: 7em;
+height: 7em;
+animation: orbit 50s linear infinite;
 }
 
-.mars {
-    background-color: red;
-    width: 25px;
-    height: 25px;
-    animation: orbit 12s linear infinite;
-    transform-origin: 280px;
+.marte{
+top:2em;
+left: 2.5em;
+width: 36em;
+height: 36em;
+animation: orbit 50s linear infinite;
 }
 
-.jupiter {
-    background-color: brown;
-    width: 50px;
-    height: 50px;
-    animation: orbit 15s linear infinite;
-    transform-origin: 340px;
+.jupiter{
+top:-2em;
+left: -2em;
+width:45em;
+height: 45em;
+ animation: orbit 50s linear infinite;
 }
 
-.saturn {
-    background-color: goldenrod;
-    width: 45px;
-    height: 45px;
-    animation: orbit 18s linear infinite;
-    transform-origin: 400px;
-}
-
-.uranus {
-    background-color: lightblue;
-    width: 35px;
-    height: 35px;
-    animation: orbit 20s linear infinite;
-    transform-origin: 460px;
-}
-
-.neptune {
-    background-color: darkblue;
-    width: 30px;
-    height: 30px;
-    animation: orbit 22s linear infinite;
-    transform-origin: 520px;
-}
-
-@keyframes orbit {
-    from {
-        transform: rotate(0deg) translateX(0);
+.saturno{
+    top:-7em;
+    left: -7em;
+    width: 55em;
+    height: 55em;
+    animation: orbit 50s linear infinite;
     }
-    to {
-        transform: rotate(360deg) translateX(0);
-    }
+
+    .urano{
+        top:-12em;
+        left: -12em;
+        width: 65em;
+        height: 65em;
+        animation: orbit 50s linear infinite;
+        }
+
+        .netuno{
+            top:-17em;
+            left: -17em;
+            width: 75em;
+            height: 75em;
+            animation: orbit 50s linear infinite;
+            }
+    
+
+.mercurio::before, .venus::before, .terra::before, .lua::before, .marte::before, .jupiter::before, .saturno::before, .urano::before, .netuno::before{
+content: ;
+position: absolute;
+border-radius: 50%;
+animation: orbit 50s linear infinite;
+}
+
+.mercurio::before{
+  top: 1.5em; 
+right: 0.8em;
+width: 2em;
+height: 2em;
+background-image: url(../../mercurio-planeta.png);
+}
+
+.venus::before{
+    top: 1.5em; 
+    right: 0.8em;
+    width: 2em;
+    height: 2em;
+    
+}
+
+
+.star{
+position: absolute;
+background-color: aliceblue;
+border-radius: 50%;
+z-index: -1;
 }
